@@ -1,0 +1,226 @@
+.App {
+    text-align: center;
+}
+
+.butt {
+    margin-top: 50px;
+}
+
+.b1 {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    cursor: pointer;
+}
+
+.b2,
+.b3 {
+    margin-right: 10px;
+}
+
+a {
+    color: black;
+}
+
+span {
+    color: red;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/**
+ * $Variables 
+ **/
+
+$color-bg: white !default;
+$color-btn: #FE4365 !default;
+$color-btn-secondary: #C8C8A9;
+$color-btn-active: #4ECDC4 !default;
+
+/**
+ * $Mixins 
+ **/
+
+@mixin fontsize($size: 24, $base: 16) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+
+/* http://www.sitepoint.com/sass-mixins-kickstart-project/ */
+
+@mixin transition-timing-function($timing) {
+    -webkit-transition-timing-function: $timing;
+    -moz-transition-timing-function: $timing;
+    -o-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin transition-duration($duration) {
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    transition-duration: $duration;
+}
+
+
+/* $Base */
+
+h1 {
+    @include fontsize(38);
+    font-style: italic;
+    text-shadow: 1px 1px 0 #f2f2f2, 2px 2px 0 #f2f2f2;
+}
+
+
+/* $Buttom */
+
+.b2,
+.b3 {
+    display: inline-block;
+    margin: 15px 15px 0;
+    padding: .6em 1.1em;
+    @include fontsize(26);
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: $color-btn;
+    border-radius: 3px;
+    box-shadow: 0 0 0 -2px $color-bg, 0 0 0 -1px $color-btn;
+    border: none;
+    -webkit-transition: -webkit-box-shadow .3s;
+    transition: box-shadow .3s;
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 0 2px $color-bg, 0 0 0 4px darken(#FF1D74, 5%);
+        @include transition-timing-function(cubic-bezier(.6, 4, .3, .8));
+        @include animation (gelatine .5s 1);
+    }
+}
+
+.b2.b3:active {
+    background: $color-btn-active;
+    @include transition-duration(0);
+    box-shadow: 0 0 0 2px $color-bg, 0 0 0 4px darken($color-btn-active, 5%);
+}
+
+
+/**
+ * $keyframes \ gelatine 
+ **/
+
+@keyframes gelatine {
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    25% {
+        -webkit-transform: scale(.9, 1.1);
+        transform: scale(.9, 1.1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, .9);
+        transform: scale(1.1, .9)
+    }
+    75% {
+        -webkit-transform: scale(.95, 1.05);
+        transform: scale(.95, 1.05)
+    }
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    25% {
+        -webkit-transform: scale(.9, 1.1);
+        transform: scale(.9, 1.1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, .9);
+        transform: scale(1.1, .9)
+    }
+    75% {
+        -webkit-transform: scale(.95, 1.05);
+        transform: scale(.95, 1.05)
+    }
+}
+
+@-webkit-keyframes gelatine {
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    25% {
+        -webkit-transform: scale(.9, 1.1);
+        transform: scale(.9, 1.1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, .9);
+        transform: scale(1.1, .9)
+    }
+    75% {
+        -webkit-transform: scale(.95, 1.05);
+        transform: scale(.95, 1.05)
+    }
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    25% {
+        -webkit-transform: scale(.9, 1.1);
+        transform: scale(.9, 1.1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, .9);
+        transform: scale(1.1, .9)
+    }
+    75% {
+        -webkit-transform: scale(.95, 1.05);
+        transform: scale(.95, 1.05)
+    }
+}

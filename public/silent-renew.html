@@ -1,0 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.5.1/oidc-client.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+/*
+Silent refresh uses the assumption that the user is still logged into OIDC
+to automatically make another OpenID Connect authorization request and receive new tokens. 
+-- renew access token --
+*/
+    new Oidc.UserManager().signinSilentCallback().catch((error) => {
+        console.log(error);
+    })
+
+</script>
+
