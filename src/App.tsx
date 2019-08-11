@@ -58,7 +58,7 @@ class App extends React.Component<any, any> {
         const isLoggedIn = this.state.user;
         return (
             <div className="App">
-                <h1>Assignment Security.</h1>
+                <h1 className="knockout">Assignment Security.</h1>
                 <h2>Security react spa pkce oidc.</h2>
                 <p>profile =  <b>{isLoggedIn ? JSON.stringify(isLoggedIn.profile) : <button type="submit" className="b1" onClick={this.login}>sorry you're not logged in yet.Click <span>here</span> to login</button>}</b> </p>
                 <button className="b2" onClick={this.callApi}>API</button>

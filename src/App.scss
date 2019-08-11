@@ -114,8 +114,19 @@ h1 {
     text-shadow: 1px 1px 0 #f2f2f2, 2px 2px 0 #f2f2f2;
 }
 
-
-/* $Buttom */
+.knockout {
+    background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+    color: red;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: arial, helvetica;
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
 
 .b2,
 .b3 {
