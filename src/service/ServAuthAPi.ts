@@ -13,13 +13,14 @@ export class ServAuthAPi {
     //https://github.com/stsiwo/idp_auth_pkce_client/blob/master/src/config/oidc.js
     //https://www.npmjs.com/package/oidc-client
     //https://github.com/IdentityModel/oidc-client-js
+    let url = process.env.REACT_APP_SERVER_URL;
 
     const conf = {
       authority: 'https://demo.identityserver.io/',
       client_id: 'spa',
-      redirect_uri: 'http://localhost:4200/signin-callback.html',
-      silent_redirect_uri: 'http://localhost:4200/silent-renew.html',
-      post_logout_redirect_uri: 'http://localhost:4200/',
+      redirect_uri: url + '/signin-callback.html',
+      silent_redirect_uri: url + '/silent-renew.html',
+      post_logout_redirect_uri: url,
       //we receive an authorization code in return from the authorization endpoint
       //https://www.scottbrady91.com/Angular/Migrating-oidc-client-js-to-use-the-OpenID-Connect-Authorization-Code-Flow-and-PKCE
 
