@@ -59,7 +59,7 @@ class App extends React.Component<any, any> {
         return (
             <div className="App">
                 <h1>Assignment Security.</h1>
-                <div className="knockout"><a href="http://mksht.crisnoble.com">Amine Abdelfettah El Azimani</a></div>
+                <div className="knockout"><a href="http://mksht.crisnoble.com">Amine</a></div>
                 <h2>Security react spa pkce oidc.</h2>
                 <p>profile =  <b>{isLoggedIn ? JSON.stringify(isLoggedIn.profile) : <button type="submit" className="b1" onClick={this.login}>sorry you're not logged in yet.Click <span>here</span> to login</button>}</b> </p>
                 <button className="b2" onClick={this.callApi}>API</button>
